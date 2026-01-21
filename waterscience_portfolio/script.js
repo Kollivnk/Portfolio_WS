@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentTheme === 'light') {
             toggleSwitch.checked = true;
         }
+    } else {
+        // Default to light theme if no preference is saved
+        document.documentElement.setAttribute('data-theme', 'light');
+        toggleSwitch.checked = true;
     }
 
     function switchTheme(e) {
